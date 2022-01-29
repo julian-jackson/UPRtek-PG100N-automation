@@ -1,0 +1,35 @@
+Required Software:
+
+- Python 3.10.2 (with global PATH enabled)
+- Java JDK 17
+- JAVA JRE 8 (64bit)
+
+Required Python Libraries:
+
+- xlwt
+- xlrd
+- pandas
+- pygame
+
+Instructions:
+
+1. Open uSpectrum and connect the UPRtek devicc. Ensure that it has been dark calibration.
+2. Enter the "View" menu
+3. Launch DataCollection.py or DataCollection.pyw (headless start version) to run the program.
+4. A GUI will appear. It will allow you to set the current ID or to start a testing run.
+5. Upon starting the testing run ensure that the Java CMD window is not obstruction the capture button.
+6. The program will begin testing through the patterns and alert you when finished.
+7. Swap out the LED ensuring to disconnect the 48V before swapping it
+
+Unusual Behaviour:
+
+- Almost "Missing the phase" or "Missing the phase":
+When uSpectrum is delayed and is recording light readings at the edge of the window this is often due to slow hardware.
+The most likely scenario is an overheating device that is being thermally handicapped and can be solved by letting
+the device cool.
+
+- Immediate Crashing of the Python Window:
+The most likely cause of this is a COM port error. This can be solved by reconnecting the COM port port to the computer.
+
+- Stuck LED
+Press the reset button on the ESP32 to reset the LED. Starting the script will also reset the LED.
